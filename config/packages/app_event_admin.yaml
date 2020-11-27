@@ -4,3 +4,11 @@ sulu_admin:
             routes:
                 list: 'app.get_events'
                 detail: 'app.get_event'
+
+sulu_route:
+    mappings:
+        App\Entity\Event:
+            generator: schema
+            options:
+                route_schema: /events/{implode("-", object)}
+            resource_key: events

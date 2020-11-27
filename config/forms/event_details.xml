@@ -14,6 +14,14 @@
             <params>
                 <param name="headline" value="true"/>
             </params>
+
+            <tag name="sulu.rlp.part"/>
+        </property>
+
+        <property name="routePath" type="route" mandatory="true">
+            <meta>
+                <title>sulu_admin.url</title>
+            </meta>
         </property>
 
         <property name="image" type="single_media_selection" colspan="12">

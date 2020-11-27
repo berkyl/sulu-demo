@@ -13,6 +13,7 @@ services:
             Sulu\Bundle\SnippetBundle\Snippet\DefaultSnippetManagerInterface: '@sulu_snippet.default_snippet.manager'
             Sulu\Component\PHPCR\PathCleanupInterface: '@sulu.content.path_cleaner'
             Doctrine\ORM\EntityManagerInterface: '@doctrine.orm.entity_manager'
+            Sulu\Bundle\RouteBundle\Entity\RouteRepositoryInterface: '@sulu.repository.route'
 
     # makes classes in src/ available to be used as services
     # this creates a service per class whose id is the fully-qualified class name
@@ -47,3 +48,6 @@ services:
 
     App\Content\Type\AlbumSelection:
         tags: [{name: 'sulu.content.type', alias: 'album_selection'}]
+
+    App\Routing\EventRouteDefaultsProvider:
+        tags: [{ name: 'sulu_route.defaults_provider' }]
